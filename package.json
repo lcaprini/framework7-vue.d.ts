@@ -1,0 +1,24 @@
+{
+  "name": "@types/framework7-vue",
+  "version": "1.0.1",
+  "description": "Typescript definitions for framework7-Vue v2 by iDangero.us",
+  "main": "framework7-vue.d.ts",
+  "types": "framework7-vue.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonKleban/framework7-vue.d.ts.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JasonKleban/framework7-vue.d.ts/issues"
+  },
+  "homepage": "https://github.com/JasonKleban/framework7-vue.d.ts#readme",
+  "dependencies": {
+    "@types/framework7": "git+https://github.com/JasonKleban/Framework7.d.ts.git#v2",
+    "vue": "^2.5.13"
+  }
+}
