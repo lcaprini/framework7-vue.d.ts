@@ -4,9 +4,11 @@ declare module 'framework7-vue' {
     import { PluginObject } from 'vue'
     import Framework7 from 'framework7'
 
-    export interface VuePlugin extends PluginObject<Framework7> {
+    interface VuePlugin extends PluginObject<Framework7> {
         install(vue : typeof Vue, options? : Framework7) : void;
     }
+    const Framework7Vue : VuePlugin;
+    export default Framework7Vue;
 
     export const Framework7Vue : VuePlugin;
     export const f7Accordion : Component
