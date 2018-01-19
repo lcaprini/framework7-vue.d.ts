@@ -10,7 +10,6 @@ declare module 'framework7-vue' {
     const Framework7Vue : VuePlugin;
     export default Framework7Vue;
 
-    export const Framework7Vue : VuePlugin;
     export const f7Accordion : Component
     export const f7AccordionContent : Component
     export const f7AccordionItem : Component
