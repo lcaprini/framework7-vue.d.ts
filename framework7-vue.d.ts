@@ -1,5 +1,5 @@
-declare module 'framework7-vue' {
-    import Vue from 'vue'
+ 
+    import Vue from './vue'
     import { Component } from 'vue'
     import { PluginObject } from 'vue'
     import Framework7 from 'framework7'
@@ -7,7 +7,7 @@ declare module 'framework7-vue' {
     interface VuePlugin extends PluginObject<Framework7> {
         install(vue : typeof Vue, options? : Framework7) : void;
     }
-    const Framework7Vue : VuePlugin;
+    export const Framework7Vue : VuePlugin;
     export default Framework7Vue;
 
     export const f7AccordionContent: Component
@@ -86,4 +86,4 @@ declare module 'framework7-vue' {
     export const f7Toolbar: Component
     export const f7View: Component
     export const f7Views: Component
-}
+ 
