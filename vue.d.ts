@@ -3,20 +3,25 @@
  */
 
 import Vue from "vue";
-import VueRouter, { Route, RawLocation, NavigationGuard } from "./index";
+import Framework7 from 'framework7'
 
 declare module "vue/types/vue" {
   interface Vue {
-    $router: VueRouter;
-    $route: Route;
+    framework7: Framework7;
+    $routes: any[];
   }
 }
 
-declare module "vue/types/options" {
+declare module 'vue/types/options' {
   interface ComponentOptions<V extends Vue> {
-    router?: VueRouter;
-    beforeRouteEnter?: NavigationGuard;
-    beforeRouteLeave?: NavigationGuard;
-    beforeRouteUpdate?: NavigationGuard;
+          
+      framework7?: {
+          theme?: string
+      }
+
+      routes?: { 
+          path: string, 
+          component : Component<any, any, any, any> | AsyncComponent<any, any, any, any> 
+      }[]
   }
 }
