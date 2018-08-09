@@ -1,9 +1,9 @@
 /**
  * Augment the typings of Vue.js
  */
-
-import Vue from 'vue';
 import Framework7 from 'framework7';
+import Vue from 'vue';
+
 
 declare module 'vue/types/vue' {
     interface Vue {
@@ -23,17 +23,23 @@ declare module 'vue/types/vue' {
         $theme: {
             ios: boolean,
             material: boolean
-        }
-        $f7router: Framework7.Router,
+        };
+        $f7router: Framework7.Router;
         $f7route: {
             url: string;
             path: Framework7.RoutePath;
-            query: object;
-            params: object;
+            query: {
+                [key: string]: any
+            };
+            params: {
+                [key: string]: any
+            };
             name: string;
             hash: string;
             route: object;
-            context: object;
+            context: {
+                [key: string]: any
+            };
         }
 
         onF7Ready($f7: Framework7): void;
